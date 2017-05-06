@@ -11,8 +11,13 @@ var bannerTemplate = function(p) {
   var externalHeight;
   var scale;
 
-  var maxLeafCount = 100;
-  var leafGroup;
+  var leafCountBack = 20;
+  var leafCountFront = 10;
+  var leafCountColliding = 20;
+
+  var leafGroupBack;
+  var leafGroupColliding;
+  var leafGroupFront;
 
   var centerCircleGroup;
   var centerCircle;
@@ -78,10 +83,11 @@ var bannerTemplate = function(p) {
 
     p.background(255,237,195);
 
-    self.leafGroup = new p.Group();
+    self.leafGroupColliding = new p.Group();
 
-    for(var i=0 ; i< maxLeafCount ; i++){
-      var leaf = p.createSprite(p.random(0,p.width),p.random(0,p.height));
+    //===============COLLIDING LEAVES==================
+    for(var i=0 ; i< leafCountColliding ; i++){
+      var leaf = p.createSprite(p.random(0,p.width),p.random(p.height*0.3,p.height*0.7));
       leaf.setCollider("circle", 0,0,10*self.scale);
       leaf.setSpeed(p.random(10*self.scale,2*self.scale), p.random(-20, 20));
       leaf.maxSpeed=20*self.scale;
@@ -91,36 +97,84 @@ var bannerTemplate = function(p) {
           this.position.x = (0 - this.width);
         }
         if(this.position.y > (p.height*1.1)){
-          // this.position.y = (0 - this.heigth);
           this.position.y = 0;
         }
         if(this.position.y < (0 - this.heigth)){
-          // this.position.y = (p.height*1.1);
           this.position.y = p.height;
         }
-
-        // var snoise_x = (p.noise(this.position.x)*2. - 1.);
-        // var snoise_y = (p.noise(this.position.y)*2 - 1);
-        //
-        // console.log(snoise_x);
-        //
-        // this.addSpeed(snoise_x,180);
-
-
       }
-      leaf.scale = p.random(0.5, 1);
+      leaf.scale = p.random(1.7, 2.5);
       leaf.mass = leaf.scale;
-      self.leafGroup.add(leaf);
+      self.leafGroupColliding.add(leaf);
     }
 
+
+    //===============BACK LEAVES==================
+    self.leafGroupBack = new p.Group();
+
+    for(var i=0 ; i< leafCountBack ; i++){
+      var leaf = p.createSprite(p.random(0,p.width),p.random(0,p.height));
+      leaf.setCollider("circle", 0,0,10*self.scale);
+      leaf.setSpeed(p.random(5*self.scale,2*self.scale), p.random(-20, 20));
+      leaf.maxSpeed=10*self.scale;
+      leaf.draw = function() {
+        p.ellipse(0,0,20*self.scale,20*self.scale);
+        if(this.position.x > (p.width+this.width)){
+          this.position.x = (0 - this.width);
+        }
+        if(this.position.y > (p.height*1.1)){
+          this.position.y = 0;
+        }
+        if(this.position.y < (0 - this.heigth)){
+          this.position.y = p.height;
+        }
+      }
+      leaf.scale = p.random(0.8, 1.4);
+      leaf.mass = leaf.scale;
+      self.leafGroupBack.add(leaf);
+    }
+
+    //===============FRONT LEAVES==================
+    self.leafGroupFront = new p.Group();
+
+    for(var i=0 ; i< leafCountFront ; i++){
+      var leaf = p.createSprite(p.random(0,p.width),p.random(0,p.height));
+      leaf.setCollider("circle", 0,0,10*self.scale);
+      leaf.setSpeed(p.random(20*self.scale,2*self.scale), p.random(-20, 20));
+      leaf.maxSpeed=40*self.scale;
+      leaf.draw = function() {
+        p.ellipse(0,0,20*self.scale,20*self.scale);
+        if(this.position.x > (p.width+this.width)){
+          this.position.x = (0 - this.width);
+        }
+        if(this.position.y > (p.height*1.1)){
+          this.position.y = 0;
+        }
+        if(this.position.y < (0 - this.heigth)){
+          this.position.y = p.height;
+        }
+      }
+      leaf.scale = p.random(6, 10);
+      leaf.mass = leaf.scale;
+      self.leafGroupBack.add(leaf);
+    }
   };
+
+
+
+
+
 
   p.draw = function (){
     p.background(255,237,195);
-    //self.leafGroup.bounce(self.leafGroup);
-    self.centerCircleGroup.displace(self.leafGroup);
+    self.centerCircleGroup.displace(self.leafGroupColliding);
 
-    p.drawSprites();
+
+    self.leafGroupBack.draw();
+    self.leafGroupColliding.draw();
+    self.centerCircleGroup.draw();
+    self.leafGroupFront.draw();
+
 
   };
 
