@@ -1,8 +1,29 @@
+body {
+background-color: #F0F0F0;
+}
+
+#banner{
+  margin: 0 !important;
+
+}
+
 .parallax-container {
   height: 500px;
 }
 
-.parallax-image {
+.parallax-image-src {
   width: 101%;
   heigth: auto;
+}
+
+.parallax canvas {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }

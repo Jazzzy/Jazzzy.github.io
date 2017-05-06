@@ -11,78 +11,69 @@
   </head>
 
   <body>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
-    <script type="text/javascript" src="js/materialize.js"></script>
-    <script type="text/javascript" src="js/modMaterialize.js"></script>
+    <script type="text/javascript" src="js/p5/lib/p5.js"></script>
+    <script type="text/javascript" src="js/p5/lib/p5.play.js"></script>
+    <script type="text/javascript" src="js/materialize/materialize.js"></script>
+    <script type="text/javascript" src="js/materialize/modMaterialize.js"></script>
+    <script type="text/javascript" src="js/p5/p5Banners.js"></script>
     <script type="text/javascript" src="js/mainWeb.js"></script>
 
+
+    <script type="text/javascript">
+      $(['resources/images/NeoPurpleLogo.png']).preload()
+    </script>
 
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <!--+++++++++++++++++++++++TRUE HTML START++++++++++++++++++++++++++-->
     <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
-    <div class="navbar-fixed">
+    <!-- <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper grey darken-4">
           <a href="#" class="brand-logo">Logo</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="waves-effect"><a href="#">About Me</a></li>
+            <li class="waves-effect"><a href="#">About Me</a></li> -->
             <!--Add on click to travel between pages-->
-            <li class="waves-effect"><a href="#">Experience</a></li>
+            <!-- <li class="waves-effect"><a href="#">Experience</a></li>
             <li class="waves-effect"><a href="#">Contact</a></li>
           </ul>
         </div>
       </nav>
-    </div>
+    </div> -->
 
-
-
-    <div id="aboutMePage" class="row s12">
+    <div id="banner" class="row s12">
       <div class="parallax-container">
-        <div class="parallax"><img class="parallax-image" src="resources/images/NeoPurpleLogo.png" alt="NeoPurpleBanner"></div>
-      </div>
-
-      <div class="section grey lighten-4">
-        <div class="row container">
-          <h2 class="header">ABOUT ME</h2>
-          <p class="grey-text text-darken-3 lighten-3">This is just a text :P</p>
-        </div>
-      </div>
-      <div class="parallax-container">
-        <div class="parallax"><img class="parallax-image" src="resources/images/NeoPurpleLogo.png" alt="NeoPurpleBanner"></div>
+        <!-- <div class="parallax"> -->
+          <div id="p5BannerContainer" class="parallax">
+            <!--P5 BANNER-->
+          </div>
+        <!-- </div> -->
       </div>
     </div>
 
-    <div id="experiencesPage" class="row s12 hide">
-      <div class="parallax-container">
-        <div class="parallax"><img class="parallax-image" src="resources/images/NeoPurpleLogo.png" alt="NeoPurpleBanner"></div>
-      </div>
-
-      <div class="section grey lighten-4">
-        <div class="row container">
-          <h2 class="header">EXPERIENCES</h2>
-          <p class="grey-text text-darken-3 lighten-3">This is just a text :P</p>
-        </div>
-      </div>
-      <div class="parallax-container">
-        <div class="parallax"><img class="parallax-image" src="resources/images/NeoPurpleLogo.png" alt="NeoPurpleBanner"></div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">Lorem Ipsum</h2>
+        <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu vulputate velit, ut pulvinar dui. Sed a imperdiet erat. Curabitur sit amet volutpat lectus, eget pulvinar risus. Phasellus vitae commodo elit. Pellentesque eleifend magna quam, vel ultricies magna ullamcorper id. Fusce ac nunc sed erat porttitor cursus rutrum ut mi. Nam commodo libero nec aliquet mattis. Integer ut iaculis erat. Curabitur mi erat, porta nec nisi elementum, ullamcorper luctus mauris.</p>
       </div>
     </div>
 
 
-    <div id="contactPage" class="row s12 hide">
-      <div class="parallax-container">
-        <div class="parallax"><img class="parallax-image" src="resources/images/NeoPurpleLogo.png" alt="NeoPurpleBanner"></div>
-      </div>
-
-      <div class="section white">
-        <div class="row container">
-          <h2 class="header">CONTACT</h2>
-          <p class="grey-text text-darken-3 lighten-3">This is just a text :P</p>
-        </div>
-      </div>
+    <div class="parallax-container">
+      <div class="parallax"><img class="parallax-image-src" src="resources/images/NeoPurpleLogo.png"></div>
     </div>
 
+
+
+
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">Lorem Ipsum</h2>
+        <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu vulputate velit, ut pulvinar dui. Sed a imperdiet erat. Curabitur sit amet volutpat lectus, eget pulvinar risus. Phasellus vitae commodo elit. Pellentesque eleifend magna quam, vel ultricies magna ullamcorper id. Fusce ac nunc sed erat porttitor cursus rutrum ut mi. Nam commodo libero nec aliquet mattis. Integer ut iaculis erat. Curabitur mi erat, porta nec nisi elementum, ullamcorper luctus mauris.</p>
+      </div>
+    </div>
 
 
 

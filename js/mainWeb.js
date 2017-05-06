@@ -1,12 +1,19 @@
+var DEBUG = false;
+
 $( document ).ready( onReadyDocument );
 $( window ).resize( onResizeWindow );
 
 function onReadyDocument() {
   setUpParallax();
   setUpTabs();
+  setUpBanners();
+
+  window.scrollTo(1, 1);
+
 }
 
 function onResizeWindow() {
+  setUpBanners();
   setUpParallax();
 }
 
@@ -19,10 +26,5 @@ function setUpTabs() {
   less since the parallax window is 3/1
 */
 function setUpParallax() {
-  $( ".parallax" ).parallax( 115 ); //We can change this value to change the parallax speed
-
-  var w_heigth = $( window ).height();
-  var w_width = $( window ).width();
-
-  $( ".parallax-container" ).height( w_width / 3 );
+  $( ".parallax" ).parallax(); //We can change this value to change the parallax speed
 }

@@ -1,17 +1,15 @@
 /*
 Image preloading
 */
+(function( $ ) {
 $.fn.preload = function() {
   this.each( function() {
     $( '<img/>' )[ 0 ].src = this;
   } );
 }
+})(jQuery);
 // We can just create the array and call .preload() on it
 //$(['img1.jpg','img2.jpg','img3.jpg']).preload();
-
-
-
-
 
 
 /*
@@ -19,7 +17,7 @@ Parallax with speed
 */
 ( function( $ ) {
 
-  $.fn.parallax = function( speed ) {
+  $.fn.parallax = function( speed  ) {
 
     var parallaxSpeed = function( speed ) {
       if ( isNaN( speed ) ) {
@@ -29,21 +27,46 @@ Parallax with speed
       }
     };
 
+
     var window_width = $( window ).width();
-    // Parallax Scripts
+
+    if(this != undefined)
     return this.each( function( i ) {
+
+
       var $this = $( this );
       $this.addClass( 'parallax' );
 
+
       function updateParallax( initial ) {
+
+        var _canvas;
+
+        if($this.find("canvas").length > 0){
+          _canvas = true;
+        }else{
+          _canvas = false;
+        }
 
         var container_height;
         if ( window_width < 601 ) {
-          container_height = ( $this.height() > 0 ) ? $this.height() : $this.children( "img" ).height();
+
+          if(_canvas){
+            container_height = ( $this.height() > 0 ) ? $this.height() : $this.children( "canvas" ).height();
+          }else{
+            container_height = ( $this.height() > 0 ) ? $this.height() : $this.children( "img" ).height();
+          }
+
         } else {
           container_height = ( $this.height() > 0 ) ? $this.height() : 500;
         }
-        var $img = $this.children( "img" ).first();
+
+
+        if(_canvas){
+          var $img = $this.children( "canvas" ).first();
+        }else{
+          var $img = $this.children( "img" ).first();
+        }
         var img_height = $img.height();
         var parallax_dist = img_height - container_height;
         var bottom = $this.offset().top + container_height;
@@ -57,18 +80,28 @@ Parallax with speed
         if ( initial ) {
           $img.css( 'display', 'block' );
         }
-        if ( ( bottom > scrollTop ) && ( top < ( scrollTop + windowHeight ) ) ) {
-          $img.css( 'transform', "translate3D(-50%," + parallax + "px, 0)" );
+
+        if(_canvas){
+          if ( ( bottom > scrollTop ) && ( top < ( scrollTop + windowHeight ) ) ) {
+            $img.css( 'transform', "translate3D(-50%," + parallax + "px, 0)" );
+          }
+        }else{
+          if ( ( bottom > scrollTop ) && ( top < ( scrollTop + windowHeight ) ) ) {
+            $img.css( 'transform', "translate3D(-50%," + parallax + "px, 0)" );
+          }
         }
+
+
 
       }
 
-      // Wait for image load
-      $this.children( "img" ).one( "load", function() {
-        updateParallax( true );
-      } ).each( function() {
-        if ( this.complete ) $( this ).trigger( "load" );
-      } );
+
+        $this.children( "img" ).one( "load", function() {
+          updateParallax( true );
+        } ).each( function() {
+          if ( this.complete ) $( this ).trigger( "load" );
+        } );
+
 
       $( window ).scroll( function() {
         window_width = $( window ).width();
@@ -85,4 +118,4 @@ Parallax with speed
   };
 }( jQuery ) );
 
-console.log( "JS Mods loaded" );
+console.log( "Materialize Mods loaded" );
