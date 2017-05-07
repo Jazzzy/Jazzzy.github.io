@@ -1,10 +1,9 @@
 body {
-background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
-#banner{
-  margin: 0 !important;
-
+.banner {
+  margin: 0;
 }
 
 .parallax-container {
@@ -18,12 +17,12 @@ background-color: #F0F0F0;
 
 .parallax canvas {
   position: absolute;
-  left: 50%;
   bottom: 0;
+  left: 50%;
   min-width: 100%;
   min-height: 100%;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translate3d(0, 0, 0);
+  transform: translateX(-50%);
 }

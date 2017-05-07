@@ -1,7 +1,10 @@
-var DEBUG = false;
+Config = {
+  Debug: false,
+  ComplexCircles: false
+};
 
-$( document ).ready( onReadyDocument );
-$( window ).resize( onResizeWindow );
+$(document).ready(onReadyDocument);
+$(window).resize(onResizeWindow);
 
 function onReadyDocument() {
   setUpParallax();
@@ -18,7 +21,7 @@ function onResizeWindow() {
 }
 
 function setUpTabs() {
-  $( 'ul.tabs' ).tabs();
+  $('ul.tabs').tabs();
 }
 
 /*
@@ -26,5 +29,5 @@ function setUpTabs() {
   less since the parallax window is 3/1
 */
 function setUpParallax() {
-  $( ".parallax" ).parallax(); //We can change this value to change the parallax speed
+  $(".parallax").parallax(130); //We can change this value to change the parallax speed
 }
