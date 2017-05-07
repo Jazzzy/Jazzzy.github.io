@@ -5,20 +5,31 @@ Config = {
 
 $(document).ready(onReadyDocument);
 $(window).resize(onResizeWindow);
+$(window).resize($.debounce(250, afterResizeWindow));
 
 function onReadyDocument() {
   setUpParallax();
   setUpTabs();
   setUpBanners();
 
-  window.scrollTo(1, 1);
+  animateToTop();
+}
 
+function animateToTop() {
+  $('html, body').animate({
+    scrollTop: 200000000
+  }, 1);
+  $('html, body').animate({
+    scrollTop: 0
+  }, 2000);
 }
 
 function onResizeWindow() {
   setUpBanners();
   setUpParallax();
 }
+
+function afterResizeWindow() {}
 
 function setUpTabs() {
   $('ul.tabs').tabs();

@@ -33,10 +33,9 @@ Parallax with speed
     if (this != undefined)
       return this.each(function (i) {
 
-
         var $this = $(this);
-        $this.addClass('parallax');
 
+        $this.addClass('parallax');
 
         function updateParallax(initial) {
 
@@ -90,11 +89,11 @@ Parallax with speed
               $img.css('transform', "translate3D(-50%," + parallax + "px, 0)");
             }
           }
-
-
-
         }
 
+        var callFunc = updateParallax;
+        callFunc(true);
+        //@TODO: Fix weird canvas jump on resizing
 
         $this.children("img").one("load", function () {
           updateParallax(true);
@@ -102,6 +101,7 @@ Parallax with speed
           if (this.complete) $(this).trigger("load");
         });
 
+        updateParallax(true);
 
         $(window).scroll(function () {
           window_width = $(window).width();

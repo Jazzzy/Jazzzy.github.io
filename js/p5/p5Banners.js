@@ -4,23 +4,33 @@
 
 
 var bannerTemplate = function (p) {
+  //Self reference
   var self = this;
 
+  //html values
   var externalHeight;
   var scale;
 
+  //Leaf variables
   var leafCountBack = 20;
   var leafCountFront = 10;
   var leafCountColliding = 20;
-
   var leafGroupBack;
   var leafGroupColliding;
   var leafGroupFront;
 
+  //Main circle logo variables
   var centerCircleGroup;
   var centerCircle;
+  var logoImage;
 
   var noiseVal = 0;
+
+
+
+  p.preload = function () {
+    self.logoImage = p.loadImage("resources/images/perfil.png");
+  };
 
   p.setup = function () {
 
@@ -40,11 +50,18 @@ var bannerTemplate = function (p) {
 
     self.centerCircleGroup = new p.Group();
     self.centerCircle = p.createSprite(p.width / 2, p.height / 2);
+    //self.centerCircle.addImage(p.image(self.logoImage, 0, 0, 300, 300));
     //TODO: Put here the sprite of my image logo and resize it accordingly with self.centerCircle.scale = something
     self.centerCircle.draw = function () {
-      p.ellipse(0, 0, 300 * self.scale, 300 * self.scale);
+      p.image(self.logoImage, 0, 0, 300 * self.scale, 300 * self.scale);
+      p.fill(0, 0, 0, 0);
+      p.stroke(0);
+      p.strokeWeight(5);
+      p.ellipse(0, 0, 302 * self.scale, 302 * self.scale);
+      // p.ellipse(0, 0, 300 * self.scale, 300 * self.scale);
     };
     self.centerCircle.setCollider("circle", 0, 0, 150 * self.scale);
+    self.centerCircle.depth = 20;
     self.centerCircleGroup.add(self.centerCircle);
 
 
@@ -88,6 +105,7 @@ var bannerTemplate = function (p) {
     //===============COLLIDING LEAVES==================
     for (var i = 0; i < leafCountColliding; i++) {
       var leaf = p.createSprite(p.random(0, p.width), p.random(p.height * 0.3, p.height * 0.7));
+      leaf.depth = 10;
       leaf.setCollider("circle", 0, 0, 10 * self.scale);
       leaf.setSpeed(p.random(10 * self.scale, 2 * self.scale), p.random(-20, 20));
       leaf.maxSpeed = 20 * self.scale;
@@ -111,9 +129,9 @@ var bannerTemplate = function (p) {
 
     //===============BACK LEAVES==================
     self.leafGroupBack = new p.Group();
-
     for (var i = 0; i < leafCountBack; i++) {
       var leaf = p.createSprite(p.random(0, p.width), p.random(0, p.height));
+      leaf.depth = 0;
       leaf.setCollider("circle", 0, 0, 10 * self.scale);
       leaf.setSpeed(p.random(5 * self.scale, 2 * self.scale), p.random(-20, 20));
       leaf.maxSpeed = 10 * self.scale;
@@ -139,6 +157,7 @@ var bannerTemplate = function (p) {
 
     for (var i = 0; i < leafCountFront; i++) {
       var leaf = p.createSprite(p.random(0, p.width), p.random(0, p.height));
+      leaf.depth = 30;
       leaf.setCollider("circle", 0, 0, 10 * self.scale);
       leaf.setSpeed(p.random(20 * self.scale, 2 * self.scale), p.random(-20, 20));
       leaf.maxSpeed = 40 * self.scale;
@@ -156,7 +175,7 @@ var bannerTemplate = function (p) {
       };
       leaf.scale = p.random(6, 10);
       leaf.mass = leaf.scale;
-      self.leafGroupBack.add(leaf);
+      self.leafGroupFront.add(leaf);
     }
   };
 
@@ -166,12 +185,10 @@ var bannerTemplate = function (p) {
     p.background(255, 237, 195);
     self.centerCircleGroup.displace(self.leafGroupColliding);
 
-
     self.leafGroupBack.draw();
     self.leafGroupColliding.draw();
     self.centerCircleGroup.draw();
     self.leafGroupFront.draw();
-
 
   };
 
