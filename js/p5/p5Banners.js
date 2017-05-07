@@ -49,29 +49,29 @@ var bannerTemplate = function(p) {
     self.centerCircle.setCollider("circle",0,0,150*self.scale);
     self.centerCircleGroup.add(self.centerCircle);
 
-    var frontCircle0 = p.createSprite(p.width/2, p.height/2);
-    frontCircle0.draw = function() {
-    }
-    frontCircle0.setCollider("circle",-30*self.scale,0,135*self.scale);
-    self.centerCircleGroup.add(frontCircle0);
-
-    var frontCircle1 = p.createSprite(p.width/2.25, p.height/2);
-    frontCircle1.draw = function() {
-    }
-    frontCircle1.setCollider("circle",0,0,75*self.scale);
-    self.centerCircleGroup.add(frontCircle1);
-
-    var frontCircle2 = p.createSprite(p.width/2.4, p.height/2);
-    frontCircle2.draw = function() {
-    }
-    frontCircle2.setCollider("circle",0,0,40*self.scale);
-    self.centerCircleGroup.add(frontCircle2);
-
-    var frontCircle3 = p.createSprite(p.width/2.5, p.height/2);
-    frontCircle3.draw = function() {
-    }
-    frontCircle3.setCollider("circle",0,0,20*self.scale);
-    self.centerCircleGroup.add(frontCircle3);
+    // var frontCircle0 = p.createSprite(p.width/2, p.height/2);
+    // frontCircle0.draw = function() {
+    // }
+    // frontCircle0.setCollider("circle",-30*self.scale,0,135*self.scale);
+    // self.centerCircleGroup.add(frontCircle0);
+    //
+    // var frontCircle1 = p.createSprite(p.width/2.25, p.height/2);
+    // frontCircle1.draw = function() {
+    // }
+    // frontCircle1.setCollider("circle",0,0,75*self.scale);
+    // self.centerCircleGroup.add(frontCircle1);
+    //
+    // var frontCircle2 = p.createSprite(p.width/2.4, p.height/2);
+    // frontCircle2.draw = function() {
+    // }
+    // frontCircle2.setCollider("circle",0,0,40*self.scale);
+    // self.centerCircleGroup.add(frontCircle2);
+    //
+    // var frontCircle3 = p.createSprite(p.width/2.5, p.height/2);
+    // frontCircle3.draw = function() {
+    // }
+    // frontCircle3.setCollider("circle",0,0,20*self.scale);
+    // self.centerCircleGroup.add(frontCircle3);
 
     if(DEBUG){
       self.centerCircle.debug=true;
