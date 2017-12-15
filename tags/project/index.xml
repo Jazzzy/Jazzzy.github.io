@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project on osor.io</title>
-    <link>http://osor.io/tags/project/</link>
+    <link>http://jazzzy.github.io/tags/project/</link>
     <description>Recent content in Project on osor.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Rubén Osorio López</copyright>
     <lastBuildDate>Thu, 14 Dec 2017 22:20:03 +0000</lastBuildDate>
     
-	<atom:link href="http://osor.io/tags/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jazzzy.github.io/tags/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test Project</title>
-      <link>http://osor.io/projects/testproject/</link>
+      <link>http://jazzzy.github.io/projects/testproject/</link>
       <pubDate>Thu, 14 Dec 2017 22:20:03 +0000</pubDate>
       
-      <guid>http://osor.io/projects/testproject/</guid>
+      <guid>http://jazzzy.github.io/projects/testproject/</guid>
       <description>&lt;p&gt;Oh is this a project :P&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
