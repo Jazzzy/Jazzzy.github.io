@@ -1,0 +1,52 @@
+baseURL = "http://osor.io/"
+languageCode = "en-us"
+title = "osor.io"
+theme = "creative_portfolio_theme"
+
+[params]
+  # Style options: default (pink), blue, green, pink, red, sea, violet
+  # Use custom.css for your custom styling
+  style = "default"
+  description = "Personal Website of the Game Developer/Computer Scientist and Engineer Rubén Osorio López"
+  copyright = "&copy;2017 Rubén Osorio López"
+  sidebarAbout = [
+    "I am a Computer Scientist and Engineer turned up-and-coming Game Developer.",
+    "Originally from A Fonsagrada (Galicia, Spain), currently based in Dundee, United Kingdom."
+  ]
+  # Contact page
+     # Since this template is static, the contact form uses www.formspree.io as a
+     # proxy. The form makes a POST request to their servers to send the actual
+     # email. Visitors can send up to a 1000 emails each month for free.
+     #
+     # What you need to do for the setup?
+     #
+     # - set your email address under 'email' below
+     # - upload the generated site to your server
+     # - send a dummy email yourself to confirm your account
+     # - click the confirm link in the email from www.formspree.io
+     # - you're done. Happy mailing!
+  email = "ruben@osor.io"
+
+  # Nav links in the side bar
+  [[params.navlinks]]
+  name = "Home"
+  url = ""
+
+  [[params.navlinks]]
+  name = "About"
+  url = "about/"
+
+  [[params.navlinks]]
+  name = "Contact"
+  url = "contact/"
+
+  [params.social]
+#  facebook      = "full page or profile url in facebook"
+#  googleplus    = "full profile url in googleplus"
+  email         = "ruben@osor.io"
+  twitter       = "https://twitter.com/osor_io"
+  linkedin      = "https:www.linkedin.com/in/ruben-osorio"
+#  stackoverflow = "full profile url in stackoverflow"
+#  instagram     = "full profile url in instagram"
+  github        = "https://github.com/Jazzzy"
+
