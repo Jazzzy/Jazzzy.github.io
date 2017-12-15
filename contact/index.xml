@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Get in touch on osor.io</title>
-    <link>http://jazzzy.github.io/contact/</link>
+    <link>https://jazzzy.github.io/contact/</link>
     <description>Recent content in Get in touch on osor.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Rubén Osorio López</copyright>
     <lastBuildDate>Sun, 06 Nov 2016 13:00:25 +0530</lastBuildDate>
     
-	<atom:link href="http://jazzzy.github.io/contact/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jazzzy.github.io/contact/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

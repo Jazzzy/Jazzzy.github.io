@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on osor.io</title>
-    <link>http://jazzzy.github.io/tags/</link>
+    <link>https://jazzzy.github.io/tags/</link>
     <description>Recent content in Tags on osor.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Rubén Osorio López</copyright>
     <lastBuildDate>Thu, 14 Dec 2017 22:01:19 +0000</lastBuildDate>
     
-	<atom:link href="http://jazzzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jazzzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog</title>
-      <link>http://jazzzy.github.io/tags/blog/</link>
+      <link>https://jazzzy.github.io/tags/blog/</link>
       <pubDate>Thu, 14 Dec 2017 22:01:19 +0000</pubDate>
       
-      <guid>http://jazzzy.github.io/tags/blog/</guid>
+      <guid>https://jazzzy.github.io/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Portfolio</title>
-      <link>http://jazzzy.github.io/tags/portfolio/</link>
+      <link>https://jazzzy.github.io/tags/portfolio/</link>
       <pubDate>Thu, 14 Dec 2017 22:20:03 +0000</pubDate>
       
-      <guid>http://jazzzy.github.io/tags/portfolio/</guid>
+      <guid>https://jazzzy.github.io/tags/portfolio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project</title>
-      <link>http://jazzzy.github.io/tags/project/</link>
+      <link>https://jazzzy.github.io/tags/project/</link>
       <pubDate>Thu, 14 Dec 2017 22:20:03 +0000</pubDate>
       
-      <guid>http://jazzzy.github.io/tags/project/</guid>
+      <guid>https://jazzzy.github.io/tags/project/</guid>
       <description></description>
     </item>
     

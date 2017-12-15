@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on osor.io</title>
-    <link>http://jazzzy.github.io/tags/blog/</link>
+    <link>https://jazzzy.github.io/tags/blog/</link>
     <description>Recent content in Blog on osor.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Rubén Osorio López</copyright>
     <lastBuildDate>Thu, 14 Dec 2017 22:01:19 +0000</lastBuildDate>
     
-	<atom:link href="http://jazzzy.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jazzzy.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Testing a new blog post</title>
-      <link>http://jazzzy.github.io/posts/testing_a_new_blog_post/</link>
+      <link>https://jazzzy.github.io/posts/testing_a_new_blog_post/</link>
       <pubDate>Thu, 14 Dec 2017 22:01:19 +0000</pubDate>
       
-      <guid>http://jazzzy.github.io/posts/testing_a_new_blog_post/</guid>
+      <guid>https://jazzzy.github.io/posts/testing_a_new_blog_post/</guid>
       <description>&lt;p&gt;Lets look at this thing.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
