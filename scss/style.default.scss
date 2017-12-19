@@ -95,7 +95,7 @@ section.background-secondary {
 }
 .italic {
   font-style: italic;
-  font-family: 'Source Code Pro', monospace, "Georgia", "Times New Roman", Times, serif;
+  font-family: $font, "Georgia", "Times New Roman", Times, serif;
 }
 .img-responsive {
   margin: 0 auto;
@@ -1367,7 +1367,7 @@ STYLE SWITCHER FOR DEMO
 }
 /* navbar */
 .navbar {
-  font-family: 'Source Code Pro', monospace, "Roboto", Helvetica, Arial, sans-serif;
+  font-family: $font, "Roboto", Helvetica, Arial, sans-serif;
   min-height: 80px;
   margin-bottom: 0;
   border-top: none;
@@ -1654,7 +1654,7 @@ STYLE SWITCHER FOR DEMO
 }
 /* scaffolding */
 body {
-  font-family: 'Source Code Pro', monospace, Helvetica, Arial, sans-serif;
+  font-family: $font, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.55;
   color: $base00;
@@ -1731,7 +1731,7 @@ hr {
 /* buttons  */
 .btn {
   font-weight: 400;
-  font-family: 'Source Code Pro', monospace, "Roboto", Helvetica, Arial, sans-serif;
+  font-family: $font, "Roboto", Helvetica, Arial, sans-serif;
   padding: 6px 12px;
   font-size: 16px;
   line-height: 1.55;
@@ -1850,7 +1850,7 @@ fieldset[disabled] .btn-transparent.active {
 }
 /* labels */
 .label {
-  font-family: 'Source Code Pro', monospace, "Roboto", Helvetica, Arial, sans-serif;
+  font-family: $font, "Roboto", Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -1904,7 +1904,7 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 14px;
-  font-family: 'Source Code Pro', monospace, "Roboto", Helvetica, Arial, sans-serif;
+  font-family: $font, "Roboto", Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 .pager li {
@@ -1933,7 +1933,7 @@ label {
 /* pagination */
 .pagination {
   margin: 24px 0;
-  font-family: 'Source Code Pro', monospace, "Roboto", Helvetica, Arial, sans-serif;
+  font-family: $font, "Roboto", Helvetica, Arial, sans-serif;
   border-radius: 0;
 }
 .pagination > li > a,
@@ -2019,7 +2019,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Source Code Pro', monospace, "Roboto", Helvetica, Arial, sans-serif;
+  font-family: $font, "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: $base00;
