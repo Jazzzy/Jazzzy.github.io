@@ -1,4 +1,47 @@
 
+@import 'common';
+
+ body{
+
+  /*background: linear-gradient(to right, $base0F, $base0D 150%);*/
+
+  /*background: linear-gradient(to right, $base00, $base02);*/
+
+  background: $base00;
+
+  color: $base07;
+
+  font-family: 'Source Code Pro', monospace;
+
+}
 
 
- 
+h1.main-page-heading {
+  text-align: center;
+}
+
+
+
+
+
+.sidebar-heading a{
+
+  color: $base0A;
+  font-size: xx-large;
+
+}
+
+.sidebar-heading a:hover,a:focus{
+
+  color: $base08;
+    text-decoration: none;
+
+}
+
+.sidebar-heading a:focus{
+
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+
+}

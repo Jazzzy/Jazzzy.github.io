@@ -21,24 +21,9 @@ $fw3 : #e5989b;
 $fw4 : #b5838d;
 $fw5 : #6d6875;
 
-/* Base16 pallette */
 
-$base00: #2d2d2d;
-$base01: #393939;
-$base02: #515151;
-$base03: #747369;
-$base04: #a09f93;
-$base05: #d3d0c8;
-$base06: #e8e6df;
-$base07: #f2f0ec;
-$base08: #f2777a;
-$base09: #f99157;
-$base0A: #ffcc66;
-$base0B: #99cc99;
-$base0C: #66cccc;
-$base0D: #6699cc;
-$base0E: #cc99cc;
-$base0F: #d27b53;
+@import 'common';
+
 
 
 
@@ -2202,56 +2187,6 @@ a.list-group-item.active > .badge,
 }
 
 
-
-
-
-
-
-
-body{
-
-  /*background: linear-gradient(to right, $base0F, $base0D 150%);*/
-
-  /*background: linear-gradient(to right, $base00, $base02);*/
-
-  background: $base00;
-
-  color: $base07;
-
-  font-family: 'Source Code Pro', monospace;
-
-}
-
-
-h1.main-page-heading {
-  text-align: center;
-}
-
-
-
-
-
-.sidebar-heading a{
-
-  color: $base0A;
-  font-size: xx-large;
-
-}
-
-.sidebar-heading a:hover,a:focus{
-
-  color: $base08;
-    text-decoration: none;
-
-}
-
-.sidebar-heading a:focus{
-
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-
-}
 
 
 
