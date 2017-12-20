@@ -1,50 +1,117 @@
-
 @import 'common';
 
- body{
 
-  /*background: linear-gradient(to right, $base0F, $base0D 150%);*/
 
-  /*background: linear-gradient(to right, $base00, $base02);*/
 
-	//background-image: url(data:image/png;base64,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);
-  	background-color: $base00;
-  	color: $base07;
-  	font-family: $font;
+body {
+
+    /*background: linear-gradient(to right, $base0F, $base0D 150%);*/
+    /*background: linear-gradient(to right, $base00, $base02);*/
+    //background-image: url(data:image/png;base64,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);
+    background-color: $base00;
+    color: $base07;
+    font-family: $font;
 }
 
 
 h1.main-page-heading {
-  text-align: center;
+    text-align: center;
 }
 
 
 
-.sidebar-heading{
+.sidebar-heading {
 
-	font-size: 4vw;
+    width: 100%;
+    font-size: 3.7vw;
 
-	a{
-	  	color: $base0A;
-	  	padding: 5pt;
-	}
+    a {
+        width: 100%;
+        color: $base05;
+        padding: 5pt;
+        text-align: left;
+        span {
+            //float: left;
+        }
+    }
 
-	a:hover,a:focus{
-	  	color: $base08;
-	   	text-decoration: none;
-	}
+    a:hover,
+    a:focus {
+        color: $base08;
+        text-decoration: none;
 
-	a:focus{
-	  	outline: thin dotted;
-	  	outline: 5px auto -webkit-focus-ring-color;
-	  	outline-offset: -2px;
-	}
+        span {
+            color: $base02 !important;
+        }
+    }
 
-	a:before{
-		/* Use this ito change che highlights used in the main heading name OSOR.IO */
-		//background: $base05;
-	}
+    a:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+
+    a:before {
+        /* Use this ito change che highlights used in the main heading name OSOR.IO */
+        background: $base06;
+    }
+}
 
 
 
+.console-underscore {
+    display: inline;
+}
+
+
+@keyframes animateMyFace {
+    0% {
+        box-shadow: inset 0 0 0 100pt $base08, inset 0 0 0 100pt $base09, inset 0 0 0 100pt $base09, inset 0 0 0 100pt $base0A, inset 0 0 0 100pt $base0B, inset 0 0 0 100pt $base0C, inset 0 0 0 100pt $base0C;
+    }
+    15% {
+        box-shadow: inset 0 0 0 0pt $base08, inset 0 0 0 50pt $base09, inset 0 0 0 66pt $base09, inset 0 0 0 75pt $base0A, inset 0 0 0 80pt $base0B, inset 0 0 0 (100/6)*5pt $base0C, inset 0 0 0 (100/7)*6pt $base0C;
+    }
+    30% {
+        box-shadow: inset 0 0 0 0pt $base08, inset 0 0 0 0pt $base09, inset 0 0 0 33pt $base09, inset 0 0 0 50pt $base0A, inset 0 0 0 60pt $base0B, inset 0 0 0 (100/6)*4pt $base0C, inset 0 0 0 (100/7)*5pt $base0C;
+    }
+    45% {
+        box-shadow: inset 0 0 0 0pt $base08, inset 0 0 0 0pt $base09, inset 0 0 0 0pt $base09, inset 0 0 0 25pt $base0A, inset 0 0 0 40pt $base0B, inset 0 0 0 (100/6)*3pt $base0C, inset 0 0 0 (100/7)*4pt $base0C;
+    }
+    60% {
+        box-shadow: inset 0 0 0 0pt $base08, inset 0 0 0 0pt $base09, inset 0 0 0 0pt $base09, inset 0 0 0 0pt $base0A, inset 0 0 0 20pt $base0B, inset 0 0 0 (100/6)*2pt $base0C, inset 0 0 0 (100/7)*3pt $base0C;
+    }
+    75% {
+        box-shadow: inset 0 0 0 0pt $base08, inset 0 0 0 0pt $base09, inset 0 0 0 0pt $base09, inset 0 0 0 0pt $base0A, inset 0 0 0 0pt $base0B, inset 0 0 0 (100/6)*1pt $base0C, inset 0 0 0 (100/7)*2pt $base0C;
+    }
+    90% {
+        box-shadow: inset 0 0 0 0pt $base08, inset 0 0 0 0pt $base09, inset 0 0 0 0pt $base09, inset 0 0 0 0pt $base0A, inset 0 0 0 0pt $base0B, inset 0 0 0 0pt $base0C, inset 0 0 0 (100/7)*1pt $base0C;
+    }
+    100% {
+        box-shadow: inset 0 0 0 0pt $base08, inset 0 0 0 0pt $base09, inset 0 0 0 0pt $base09, inset 0 0 0 0pt $base0A, inset 0 0 0 0pt $base0B, inset 0 0 0 0pt $base0C, inset 0 0 0 5pt $base0C;
+    }
+}
+
+#main-photo {
+
+    animation: 1s linear 0s 1 animateMyFace;
+
+    margin: auto;
+    /*
+    border-style: solid;
+    border-width: 0pt;
+    border-color: $base0C;
+	*/
+    border-radius: 50%;
+
+    /*
+
+    */
+    box-shadow: inset 0 0 0 5pt $base0C;
+
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    background-position: 50% 50% !important;
+    width: 70%;
+    padding-top: 70%;
+    margin-top: 15pt;
 }
